@@ -75,7 +75,7 @@ main > section{
     font-size: 18px;
 }
 
-.navbar, .banner, main{
+.navbar, .banner, main, footer{
     max-width: 1440px;
     margin: 0 auto;
 }
@@ -137,31 +137,148 @@ main > section{
 
 /* style for features section 2  */
 
-.left-design{
-    width: 5px;
-    height: 106px;
-    background-color: #FF900E;
-    margin-top: 43px;
-    margin-right: 20px;
+.features-section-2{
+   display: flex; 
+   gap: 120px;
 }
 
-.title-for-section-2{
-    display: flex;
+.featured-Architect img {
+    width: 100%;
+}
+
+#left-side-border{
+    border-left: 5px solid #FF900E;
+    padding-left: 21px;
+}
+
+.feature-card{
+    padding: 30px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.06);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.feature-card-title{
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#experience-badge{
+   padding: 45px 42px; 
+   background-color: #FF900E;
+   color: white;
+   border-radius: 10px;
+   border: none;
+   margin-left: -92px;
+   margin-top: -92px;
+}
+
+.experience-pgh{
+    font-weight: 500;
+    font-size: 1.6rem;
+}
+
+.experience-title{
+    font-weight: bold;
+    font-size: 4.1rem;
 }
 
 
 /* some facts  */
 
+
+.facts-pgh{
+    max-width: 33rem;
+    height: 3rem;
+    margin-top: 1.5rem;
+}
 .facts-models{
-    display: flex;
-    justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 7rem;
+        margin-top: 6rem;
 }
 
 .fact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 13rem;
+    height: 13rem;
     text-align: center;
     border: 2px solid #FF900E ;
     padding: 20px;
     border-radius: 10px;
+}
+
+.fact-card-image{
+    width: 45px;
+    height: 45px;
+
+}
+
+.fact-h{
+    font-weight: 600;
+    font-size: 2.8rem;
+    color: #424242;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.fact-p{
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: #727272;
+
+}
+
+
+
+/* our sponsors */
+
+.sponsors-info{
+    max-width: 540px;
+    height: 130px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.sponsors-title{
+    font-weight: bold;
+    font-size: 45px;
+}
+
+.sponsors-companies{
+    margin-top: 80px;
+    display: grid;
+    gap: 150px;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.sponsors-companies img {
+    filter: grayscale(100%);
+}
+
+
+
+
+/* Footer section design  */
+
+.footer-section{
+    background-color: #FFF4E7;
+    padding:10px ;
+    margin: 130px auto;
+    border-radius: 10px;
+}
+
+.footer-pgh{
+    color: #424242;
+    font-size: 20px;
+    text-align: center;
+    
 }
 
 
@@ -172,17 +289,40 @@ main > section{
 /* Responsive for Banner  */
 
 @media screen and (max-width:576px) {
-    .flex{
+    .flex, .features-section-2{
         flex-direction: column;
     }
 
-    .team-img-container{
+    .team-img-container,
+    .sponsors-companies,
+    .facts-models{
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .facts-models {
+        justify-items: center;
+        gap: 24px;
+    }
+
+    .sponsors-companies{
+        justify-items: center;
+        gap: 35px;
     }
 
     .team-features-container{
         margin: 40px auto;
     }
+
+    #experience-badge{
+        margin-top: 20px;
+        margin-left: 20px;
+        padding: 35px 32px; 
+    }
+
+    .experience-title{
+    font-size: 3.1rem;
+}
+
 }
 
 
@@ -190,11 +330,29 @@ main > section{
 /* Responsive for tablet  */
 
 @media screen and (min-width: 576px) and (max-width: 768px) {
-    .flex{
+    .flex, .features-section-2{
         flex-direction: column;
     }
 
     .team-features-container{
         margin: 40px auto;
+    }
+
+    .facts-models{
+        justify-items: center;
+        gap: 30px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sponsors-companies{
+        justify-items: center;
+        gap: 30px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #experience-badge{
+        margin-top: 20px;
+        margin-left: 20px;
+        padding: 35px 32px; 
     }
 }
